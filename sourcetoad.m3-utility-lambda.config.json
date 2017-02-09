@@ -1,0 +1,18 @@
+{
+  "bucket": "m3-server-dev",
+  "resizes": [
+    {
+      "size": 300,
+      "directory": "/media",
+      "prefix": "thumbnail-"
+    },
+    {
+      "size": "600x600^",
+      "gravity": "Center",
+      "crop": "600x600",
+      "directory": "/media",
+      "prefix": "cropped-",
+      "orientation": true
+    }
+  ]
+}
