@@ -1,0 +1,23 @@
+{
+  "name": "nodeJs-RDS-MariaDB",
+  "version": "0.0.1",
+  "description": "A NodeJS to AWS RDS logic execution",
+  "keywords": [
+    "aws",
+    "rds",
+    "sql"
+  ],
+  "author": "David J Eddy",
+  "license": "GPL 2",
+  "dependencies": {
+    "aws-sdk": "*",
+    "mysql": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:davidjeddy/nodeJs-RDS-MariaDB.git"
+  },
+  "bugs": {
+    "url": "https://github.com/davidjeddy/nodeJs-RDS-MariaDB/issues"
+  }
+}
