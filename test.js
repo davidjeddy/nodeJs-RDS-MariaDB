@@ -1,4 +1,5 @@
 var mysql = require("mysql");
+var imageId = 'd6d1a71d-e4da-491a-8ab3-8722d5d3d891';
 
 // First you need to create a connection to the db
 var con = mysql.createConnection({
@@ -17,7 +18,7 @@ con.connect(function(err){
     console.log('Connection established');
 });
 
-con.query('SELECT id,name,x,y,l FROM file_storage_item WHERE name = \'d6d1a71d-e4da-491a-8ab3-8722d5d3d891\'',function(err,rows){
+con.query('SELECT id,name,x,y,l FROM file_storage_item WHERE name = \'' +  imageId + '\'',function(err,rows){
     if(err) throw err;
 
     console.log('Data received from Db:\n');
@@ -26,7 +27,12 @@ con.query('SELECT id,name,x,y,l FROM file_storage_item WHERE name = \'d6d1a71d-e
 
 con.query(
     'UPDATE file_storage_item SET x = ?, y = ?, l = ?  WHERE name = ?',
-    [5, 10, 15, 'd6d1a71d-e4da-491a-8ab3-8722d5d3d891'],
+    [
+        (Math.floor(Math.random() * 10 ) + 1),
+        (Math.floor(Math.random() * 10 ) + 1),
+        (Math.floor(Math.random() * 10 ) + 1),
+        imageId
+    ],
     function (err, result) {
         if (err) throw err;
 
@@ -39,3 +45,4 @@ con.end(function(err) {
     // Ensures all previously enqueued queries are still
     // before sending a COM_QUIT packet to the MySQL server.
 });
+
