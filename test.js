@@ -1,5 +1,5 @@
 var mysql = require("mysql");
-var dotenv= require("dotenv");
+var dotenv= require("dotenv").config();
 
 var imageId = 'd6d1a71d-e4da-491a-8ab3-8722d5d3d891';
 
