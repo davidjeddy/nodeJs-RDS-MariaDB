@@ -4,7 +4,7 @@ var mysql = require("mysql");
 var con = mysql.createConnection({
     host: "10.254.254.254",
     user: "m3dev",
-    password: "tn34q8",
+    password: "9847tn34q8",
     database: "m3dev",
     port: 13306
 });
@@ -17,7 +17,7 @@ con.connect(function(err){
     console.log('Connection established');
 });
 
-con.query('SELECT id,name,x,y,l FROM file_storage_item WHERE name = \'41dc366d-59b6-4068-9d95-2248f723a0af\'',function(err,rows){
+con.query('SELECT id,name,x,y,l FROM file_storage_item WHERE name = \'d6d1a71d-e4da-491a-8ab3-8722d5d3d891\'',function(err,rows){
     if(err) throw err;
 
     console.log('Data received from Db:\n');
@@ -26,7 +26,7 @@ con.query('SELECT id,name,x,y,l FROM file_storage_item WHERE name = \'41dc366d-5
 
 con.query(
     'UPDATE file_storage_item SET x = ?, y = ?, l = ?  WHERE name = ?',
-    [5, 10, 15, '41dc366d-59b6-4068-9d95-2248f723a0af'],
+    [5, 10, 15, 'd6d1a71d-e4da-491a-8ab3-8722d5d3d891'],
     function (err, result) {
         if (err) throw err;
 
