@@ -8,7 +8,7 @@
     "sql"
   ],
   "author": "David J Eddy",
-  "license": "GPL 2",
+  "license": "GPL-3.0",
   "dependencies": {
     "aws-sdk": "*",
     "mysql": "*"
