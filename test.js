@@ -1,13 +1,18 @@
 var mysql = require("mysql");
+var dotenv= require("dotenv");
+
 var imageId = 'd6d1a71d-e4da-491a-8ab3-8722d5d3d891';
+
+//var s3Object = ()
+console.log(process.env.NODE_ENV);
 
 // First you need to create a connection to the db
 var con = mysql.createConnection({
-    host: "10.254.254.254",
-    user: "m3dev",
-    password: "9847tn34q8",
-    database: "m3dev",
-    port: 13306
+    host: process.env.SQL_HOST,
+    port: process.env.SQL_PORT,
+    user: process.env.SQL_USER,
+    password: process.env.SQL_PASS,
+    database: process.env.SQL_DBSC
 });
 
 con.connect(function(err){
@@ -45,4 +50,3 @@ con.end(function(err) {
     // Ensures all previously enqueued queries are still
     // before sending a COM_QUIT packet to the MySQL server.
 });
-
